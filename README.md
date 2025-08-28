@@ -252,3 +252,14 @@ python evaluate_with_iou.py \
 📊 Accuracy per cow:
 Ava      0.95
 Bella    0.90
+
+
+# Update Compute Canada:
+
+We are reaching out to inform you that the Cedar compute cluster will be retired on September 12, 2025.
+
+Data Access
+
+Files stored on Cedar are already available on Fir because the two clusters share the same file systems; no action is required regarding your stored files.
+
+Starting September 12, please submit your jobs to Fir or another cluster on our new national infrastructure.
