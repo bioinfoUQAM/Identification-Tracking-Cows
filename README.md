@@ -2,6 +2,13 @@
 
 This project provides a complete pipeline for detecting, tracking, identifying, and analyzing cows in videos. It is designed to support behavioral research and Social Network Analysis (SNA) in animal studies, particularly livestock.
 
+<img width="1614" height="872" alt="Captura de Tela 2025-08-28 às 3 55 14 PM" src="https://github.com/user-attachments/assets/1206df52-6066-41cf-8fd1-0bbca49842b8" />
+<img width="1433" height="799" alt="Captura de Tela 2025-08-28 às 3 56 19 PM" src="https://github.com/user-attachments/assets/21f8e162-f34c-4acd-a509-923f897cd4d4" />
+
+
+
+
+
 ## Features
 
 * **YOLOv8**: Fast and accurate object detection for locating cows in video frames.
