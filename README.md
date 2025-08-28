@@ -110,3 +110,71 @@ All those paths you can find on CEDAR cluster in compute canada:
   --num-classes 29 \
   --efficientnet-weights /home/vonzin/scratch/SNA_2025_v2/lightning_logs/version_64763588_thomas_29ids_99cc_180_360cameras/checkpoints/best_model.ckpt \
   --class-names-dir /home/vonzin/scratch/SNA_2025_v2/Dataset_Augmented_29_class_v1_split_300_robusto_CERTO/train
+
+
+
+# TRAINING treinamento_detalhado.py
+
+
+This code trains and evaluates an **image classification model** for cow identification using **PyTorch Lightning** and **EfficientNet-B0** from `torchvision`.
+
+---
+
+## 🚀 Features
+
+- **Model**
+  - EfficientNet-B0 backbone with a custom classification head.
+  - Pretrained weights loaded from a local `.pth` file.
+  - Optimizer: Adam + ReduceLROnPlateau scheduler.
+  - Metrics tracked with `MulticlassAccuracy`.
+
+- **Data Handling**
+  - Supports `train/`, `val/`, and optional `test/` splits.
+  - Data augmentation: resize, random flip, rotation, normalization.
+  - Validation/test: resize + normalization only.
+
+- **Training**
+  - Mixed precision (fp16) on GPU.
+  - Early stopping and model checkpointing by validation accuracy.
+  - Metrics logging via a custom callback.
+
+- **Evaluation & Reporting**
+  - Training/validation curves (loss & accuracy).
+  - Classification report (precision, recall, f1-score).
+  - Confusion matrix visualization.
+  - Detailed predictions (true label, predicted label, confidence).
+  - **Final PDF report** with metrics and plots.
+
+- **Outputs**
+  - All results saved in `analise_model_Thomas/`
+    - `train_val_metrics.csv`
+    - `classification_report.csv`
+    - `test_predictions.csv`
+    - `loss_curve.png`, `accuracy_curve.png`, `confusion_matrix.png`
+    - `final_report.pdf`
+  - Best model checkpoint saved automatically.
+
+---
+
+## 📂 Project Structure
+
+Dataset_Augmented7_split_TREINAR/
+│── train/
+│── val/
+│── test/ # optional
+
+---
+
+## ⚡ Quick Start
+
+1. **Prepare dataset** with `train/`, `val/`, and optionally `test/` folders.
+
+2. **Run training**:
+   ```bash
+   python train.py \
+       --data-dir Dataset_Augmented7_split_TREINAR \
+       --batch-size 64 \
+       --lr 1e-3 \
+       --epochs 50
+
+
