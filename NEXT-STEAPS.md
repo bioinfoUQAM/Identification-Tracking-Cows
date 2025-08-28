@@ -13,7 +13,13 @@ This board shows the current project status and the next steps for continuing de
   Majority vote over the last N frames before locking an ID. Freeze label once stable to avoid ID switches.  
 
 - [ ] **Per-ID embedding gallery (ReID)**  
-  Store last K embeddings per cow with recency weighting. Use it to revive IDs after occlusions.  
+  Store last K embeddings per cow with recency weighting. Use it to revive IDs after occlusions.
+
+ - [ ] **Re-ID for long-term occlusion recovery**  
+  - Train or fine-tune a **cow-specific Re-ID model** (e.g., with ArcFace/Triplet loss).  
+  - Keep a **long-term embedding gallery** (hundreds of frames) with temporal decay.  
+  - When a cow reappears after being hidden for many seconds, match against gallery → restore the **same ID** instead of creating a new one.  
+  - Evaluate Re-ID performance under **severe occlusions and re-entries**.  
 
 ---
 
