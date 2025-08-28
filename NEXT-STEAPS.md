@@ -22,9 +22,9 @@ This board shows the current project status and the next steps for continuing de
     Evaluate Re-ID performance under **severe occlusions and re-entries**.  
 
  - [ ] **Apply metrics from Khaly'development during Msc degree**: 
-    1.velocity. 
-    2.distance between cows. 
-    3.heatmap. 
+    - velocity. 
+    - distance between cows. 
+    - heatmap. 
     etc,. 
 
 
