@@ -22,10 +22,10 @@ This board shows the current project status and the next steps for continuing de
     Evaluate Re-ID performance under **severe occlusions and re-entries**.  
 
  - [ ] **Apply metrics from Khaly'development during Msc degree**
-  velocity
-  distance between cows
-  heatmap
- etc,.
+    velocity.
+   distance between cows.
+   heatmap.
+   etc,.
 
 
 ##  NEXT (Medium Priority – After Stabilization)
