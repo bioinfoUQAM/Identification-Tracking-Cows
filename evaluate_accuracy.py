@@ -1,3 +1,5 @@
+#This code compares the ground-truth and the model’s predicted bounding boxes, and calculates identification accuracy per cow as well as the overall accuracy
+
 import pandas as pd
 import numpy as np
 from sklearn.metrics import precision_score, recall_score, f1_score
