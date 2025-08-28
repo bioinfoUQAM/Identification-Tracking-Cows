@@ -21,7 +21,12 @@ This board shows the current project status and the next steps for continuing de
   - When a cow reappears after being hidden for many seconds, match against gallery → restore the **same ID** instead of creating a new one.  
   - Evaluate Re-ID performance under **severe occlusions and re-entries**.  
 
----
+ - [ ] **Apply metrics from Khaly'development during Msc degree**
+- velocity
+- distance between cows
+- heatmap
+- etc,.
+
 
 ##  NEXT (Medium Priority – After Stabilization)
 
