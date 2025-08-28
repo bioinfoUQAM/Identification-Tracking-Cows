@@ -101,4 +101,12 @@ To visualize the social graph:
 * Apply layout algorithms (ForceAtlas2, etc.) to understand network structure
 
 ---
+# additional information:
+All those paths you can find on CEDAR cluster in compute canada:
 
+  --input-video /home/vonzin/scratch/SNA_2025_v2/Videos_Thomas_180 
+  --output-folder /home/vonzin/scratch/SNA_2025_v2/Videos_Thomas_180_beste.mp4 \
+  --yolo-model /home/vonzin/scratch/SNA_2025_v2/best_yolov8_detection.pt \
+  --num-classes 29 \
+  --efficientnet-weights /home/vonzin/scratch/SNA_2025_v2/lightning_logs/version_64763588_thomas_29ids_99cc_180_360cameras/checkpoints/best_model.ckpt \
+  --class-names-dir /home/vonzin/scratch/SNA_2025_v2/Dataset_Augmented_29_class_v1_split_300_robusto_CERTO/train
