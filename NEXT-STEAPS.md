@@ -16,16 +16,16 @@ This board shows the current project status and the next steps for continuing de
   Store last K embeddings per cow with recency weighting. Use it to revive IDs after occlusions.
 
  - [ ] **Re-ID for long-term occlusion recovery**  
-  - Train or fine-tune a **cow-specific Re-ID model** (e.g., with ArcFace/Triplet loss).  
-  - Keep a **long-term embedding gallery** (hundreds of frames) with temporal decay.  
-  - When a cow reappears after being hidden for many seconds, match against gallery → restore the **same ID** instead of creating a new one.  
-  - Evaluate Re-ID performance under **severe occlusions and re-entries**.  
+    Train or fine-tune a **cow-specific Re-ID model** (e.g., with ArcFace/Triplet loss).  
+    Keep a **long-term embedding gallery** (hundreds of frames) with temporal decay.  
+    When a cow reappears after being hidden for many seconds, match against gallery → restore the **same ID** instead of creating a new one.  
+    Evaluate Re-ID performance under **severe occlusions and re-entries**.  
 
  - [ ] **Apply metrics from Khaly'development during Msc degree**
-- velocity
-- distance between cows
-- heatmap
-- etc,.
+  velocity
+  distance between cows
+  heatmap
+ etc,.
 
 
 ##  NEXT (Medium Priority – After Stabilization)
