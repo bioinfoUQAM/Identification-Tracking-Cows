@@ -1,4 +1,4 @@
- Cow Identification & Tracking – Roadmap (Kanban Style)
+ Cow Identification & Tracking 
 
 This board shows the current project status and the next steps for continuing development while I’m away.  
 
@@ -23,7 +23,7 @@ This board shows the current project status and the next steps for continuing de
 
 ---
 
-## 🟡 NEXT (Medium Priority – After Stabilization)
+##  NEXT (Medium Priority – After Stabilization)
 
 - [ ] **Tracking improvements**  
   Benchmark **ByteTrack**, **StrongSORT**, **OC-SORT** → pick the most robust.  
