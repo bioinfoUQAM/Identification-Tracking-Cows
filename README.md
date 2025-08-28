@@ -185,3 +185,70 @@ Dataset_Augmented7_split_TREINAR/
        --epochs 50
 
 
+# Running: evaluate_accuracy.py
+
+
+### What this script does
+
+This tool evaluates **cow identification in videos** by comparing **model predictions** against **ground-truth annotations** using a combination of **IoU (Intersection-over-Union)** and **name matching**.
+
+It performs the following:
+
+- **Input cleanup**  
+  - Normalizes cow names (case-insensitive, replaces underscores with spaces).  
+  - Fixes ground-truth coordinate order if mislabeled as `(x1, x2, y1, y2)` instead of `(x1, y1, x2, y2)`.  
+
+- **Frame-level matching**  
+  - For each predicted box, finds the best ground-truth match using IoU.  
+  - Prioritizes **same-name matches** when IoU ≥ threshold (default 0.5).  
+  - Marks predictions as **correct** only if both box overlap and name match succeed.  
+
+- **Metrics reported**  
+  - ✅ Overall accuracy (correct / total)  
+  - 📊 Per-cow accuracy (class-wise)  
+  - 📈 Precision, Recall, and F1-score (weighted)  
+  - Optional detailed CSV with per-frame results (frame, true name, predicted name, IoU, correctness).  
+
+---
+
+### Expected CSV Format
+
+**Ground Truth (`gt.csv`)**  
+```csv
+frame,x1,y1,x2,y2,true
+1,100,150,200,300,Ava
+1,220,160,330,310,Bella
+2,120,155,210,305,Ava
+
+# pred.csv
+
+frame,x1,y1,x2,y2,predicted
+1,98,152,202,298,Ava
+1,225,158,328,312,Bella
+2,119,150,212,308,Ava
+
+# usage
+
+python evaluate_with_iou.py \
+  --pred predictions.csv \
+  --gt ground_truth.csv \
+  --iou-thresh 0.5 \
+  --save results_detailed.csv
+--pred → CSV with model predictions
+
+--gt → CSV with ground truth boxes
+
+--iou-thresh → minimum IoU to count a detection as matched (default 0.5)
+
+--save → optional path to save detailed per-frame evaluation
+
+# output
+
+✅ Overall Accuracy (IoU ≥ 0.5): 0.9234
+📈 Precision: 0.9200
+📈 Recall:   0.9150
+📈 F1-Score: 0.9175
+
+📊 Accuracy per cow:
+Ava      0.95
+Bella    0.90
