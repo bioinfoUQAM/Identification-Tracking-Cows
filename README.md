@@ -111,11 +111,11 @@ To visualize the social graph:
 # additional information:
 All those paths you can find on CEDAR cluster in compute canada:
 
-  --input-video /home/vonzin/scratch/SNA_2025_v2/Videos_Thomas_180 
-  --output-folder /home/vonzin/scratch/SNA_2025_v2/Videos_Thomas_180_beste.mp4 \
+  --input-video /home/vonzin/scratch/SNA_2025_v2/Videos__180 
+  --output-folder /home/vonzin/scratch/SNA_2025_v2/Videos__180_beste.mp4 \
   --yolo-model /home/vonzin/scratch/SNA_2025_v2/best_yolov8_detection.pt \
   --num-classes 29 \
-  --efficientnet-weights /home/vonzin/scratch/SNA_2025_v2/lightning_logs/version_64763588_thomas_29ids_99cc_180_360cameras/checkpoints/best_model.ckpt \
+  --efficientnet-weights /home/vonzin/scratch/SNA_2025_v2/lightning_logs/version_64763588__29ids_99cc_180_360cameras/checkpoints/best_model.ckpt \
   --class-names-dir /home/vonzin/scratch/SNA_2025_v2/Dataset_Augmented_29_class_v1_split_300_robusto_CERTO/train
 
 
@@ -153,7 +153,7 @@ This code trains and evaluates an **image classification model** for cow identif
   - **Final PDF report** with metrics and plots.
 
 - **Outputs**
-  - All results saved in `analise_model_Thomas/`
+  - All results saved in `analise_model_/`
     - `train_val_metrics.csv`
     - `classification_report.csv`
     - `test_predictions.csv`
