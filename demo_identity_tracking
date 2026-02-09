@@ -9,3 +9,10 @@ The demo is derived from the methods described in our paper and focuses on:
 
 The goal is to provide an accessible and reproducible entry point for
 researchers and practitioners interested in digital livestock monitoring.
+
+
+📌 This notebook is designed to run on **Google Colab**.
+
+- No local execution, replace the upload steps with file paths.
+- GPU acceleration is optional but recommended for video inference.
+
